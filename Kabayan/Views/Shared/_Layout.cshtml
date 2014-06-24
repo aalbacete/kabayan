@@ -1,0 +1,75 @@
+﻿@using System.Web.UI.WebControls
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Kabayan - Medicard Philippines, Inc.</title>
+    <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-1.10.2.min.js")"> </script>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.1/jquery-ui.min.js"> </script>
+    <link href="@Url.Content("~/Content/style.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/responsive.css")" rel="stylesheet" media="screen and (max-width: 980px)" />
+
+    @Scripts.Render("~/bundles/modernizr")
+ </head>
+<body>
+    <div class="container">
+
+        <!-- HEADER -->
+        <div class="header">
+            <div class="header-right">
+                <div class="search">
+                    <div class="button"><img src="@Url.Content("~/images/search-icon.png")" width="20px" /></div>
+                    <input type="text" placeholder="Search..." required class="search-text">
+                </div>
+                <div class="top-links">
+                    <ul>
+                        <li><a href="">Apply Now</a></li>
+                        <li><a href="">Agent's Login</a></li>
+                        <li>@Html.ActionLink("FAQs","Faq", "Home")</li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <div class="header-logo"><img src="@Url.Content("~/images/logotrans.png")" /></div>
+
+
+        </div>
+        <!-------------->
+        <!-- MAIN MENU -->
+        <div class="main-menu">
+            <ul>
+                <li>@Html.ActionLink("Home", "Index", "Home", null, new{@class="home"})</li>
+                <li>@Html.ActionLink("Coverage", "Coverage", "Home", null, new { @class = "coverage" })</li>
+                <li>@Html.ActionLink("Rates", "Rates", "Home", null, new { @class = "rates" })</li>
+                <li>@Html.ActionLink("Agent's Portal", "Agent", "Home", null, new { @class = "agent" })</li>
+                <li>@Html.ActionLink("Contact Us", "ContactUs", "Home", null, new { @class = "contact" })</li>
+            </ul>
+        </div>
+        <!--------------->
+        
+        <!------------>
+        <!-- CONTENT -->
+        <div class="content">
+           
+           
+            @RenderBody()
+        </div>
+        <!------------->
+
+        <div class="clear"></div>
+        <!-- FOOTER -->
+        <div class="footer">
+            <div class="social"><img src="@Url.Content("~/images/fb.png")" /> </div>
+
+        </div>
+        <!------------>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
