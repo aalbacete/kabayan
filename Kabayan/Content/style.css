@@ -225,11 +225,12 @@ div.search .button img {
 }
 
 input, textarea { border:1px #c0c0c0 solid; padding:5px 5px 5px 8px }
-label{ font-family:"gotham", Arial; }
+label, textarea{ font-family:"gotham", Arial; }
 .top-links {   position:absolute;  text-align:right; margin-left:0px;  }
 .top-links ul { display:inline; padding:0; list-style-type:none; }
 .top-links li{ float:left; padding-left:7px; }
 .top-links ul li a{ font-family:gotham; color:#fff; padding-left:7px; font-size:0.85em; text-decoration:none; }
 
 ul { font-family:"gotham", Arial; }
+.message-warning{ color: red;font-size: .80em; font-family:"gotham", Arial;}
 
